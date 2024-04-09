@@ -78,6 +78,7 @@ async function splitLine(line) {
         let currentLine = lines.slice(i, i + 1)
         let amountOfColors = (currentLine.toString().length - currentLine.toString().replace(/#/g, "").length)
         let lineLength = 0
+        
         for (let j = 0; j < amountOfColors; j++) {
             createImage(currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(1).toString(), i, currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(0, 1), lineLength)
             lineLength += currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(1).toString().length
