@@ -12,4 +12,5 @@ npm i fs canvas
 ```
 ## How to use
 + put your script in the code.txt file
+
     for all white text put **#--** at the start of each line
