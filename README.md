@@ -22,3 +22,10 @@ example:
 #368cd6--const #32c1ff--value #--= #699850--"value"
 ```
 [result](https://imgur.com/OBEKM6S)
++ after coloring your code (you have to do all white or colored text, the system can't understand uncolored) you can activate the index file and the system will generate an image of your code
+## activation
++ open a powershell window and navigate to the project's folder and type
+```
+node index
+```
+and press enter
