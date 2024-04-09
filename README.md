@@ -15,4 +15,10 @@ npm i fs canvas
 
     for all white text put **#--** at the start of each line
 + choose what words you want to color with what color **works only with hex codes**
-+ after choosing the colors go to the code.txt file and put before each color change #<your hex color code here>--
++ after choosing the colors go to the code.txt file and put before each color change #your hex color code here than "--"
+
+example:
+```
+#368cd6--const #32c1ff--value #--= #699850--"value"
+```
+[result](https://imgur.com/OBEKM6S)
