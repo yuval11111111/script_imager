@@ -14,3 +14,5 @@ npm i fs canvas
 + put your script in the code.txt file
 
     for all white text put **#--** at the start of each line
++ choose what words you want to color with what color **works only with hex codes**
++ after choosing the colors go to the code.txt file and put before each color change #<your hex color code here>--
