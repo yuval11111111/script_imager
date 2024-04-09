@@ -1,0 +1,20 @@
+#a24e29--import #--java.util.Scanner;
+
+#a24e29--class #--Main {
+#a24e29--   public static void #3e7be5--main#--(String[] args) {
+#--       String numberInput = #699850-- ""#--;
+#a24e29--       int #--number = Integer.parseInt(getInput(#699850-- "Input a number (-1 to exit)"#-- ));
+
+#a24e29--       while #--(number != -#3e7be5--1#--){
+#--           numberInput = (numberInput == #699850-- ""#--) ? String.valueOf(number) : number + #699850-- ", " #--+ numberInput;
+#--           number = Integer.parseInt(getInput(#699850-- "Input a number (-1 to exit)"#-- ));
+#--       }
+#--       System.#e559b1--out#--.println(numberInput);
+#--   }
+
+#a24e29--   public static #--String #3e7be5--getInput#--(String prompt){
+#--       System.#e559b1--out#--.println(prompt);
+#--       Scanner input = #a24e29--new #--Scanner(System.#e559b1--in#--);
+#a24e29--       return #--input.nextLine();
+#--   }
+#--}
