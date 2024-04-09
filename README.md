@@ -21,4 +21,4 @@ example:
 ```
 #368cd6--const #32c1ff--value #--= #699850--"value"
 ```
-![result](https://imgur.com/OBEKM6S)
+![result]([https://imgur.com/OBEKM6S](https://ibb.co/rvV4LRc))
