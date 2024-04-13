@@ -20,17 +20,20 @@ registerFont('./JetBrainsMono-Medium.ttf', {
 async function readFile() {
     fs.readFile("./code.txt", "utf8", (err, code) => {
         let longestLineLength = 0;
+        let longestLineLengthWithoutColors = 0
         const lines = code.split("\n")
         let amoountOfLines = lines.length * font + 30
 
         for (let line = 0; line < lines.length; line++) {
 
-            if (lines.slice(line,line+1).toString().length > longestLineLength){
-                longestLineLength = lines.slice(line,line+1).toString().replace(/#/g,"").replace(/--/g,"").length
+            if (lines.slice(line, line + 1).toString().length > longestLineLength) {
+                longestLineLengthWithoutColors = lines.slice(line, line + 1).toString().replace(/#--/g, "").replace(/#/g,"").length
+                longestLineLength = lines.slice(line, line + 1).toString().replace(/#--/g, "").length
             }
         }
-        
-        canvasLength = (longestLineLength/1.8 * font)
+
+        canvasLength = Math.abs((((longestLineLength - longestLineLengthWithoutColors)*7) - longestLineLength * font))/2
+        console.log(canvasLength)
         canvasHeigh = amoountOfLines
         splitLine(code)
     })
@@ -78,7 +81,6 @@ async function splitLine(line) {
         let currentLine = lines.slice(i, i + 1)
         let amountOfColors = (currentLine.toString().length - currentLine.toString().replace(/#/g, "").length)
         let lineLength = 0
-        
         for (let j = 0; j < amountOfColors; j++) {
             createImage(currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(1).toString(), i, currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(0, 1), lineLength)
             lineLength += currentLine.toString().split("#").slice(j + 1, j + 2).toString().split("--").slice(1).toString().length
